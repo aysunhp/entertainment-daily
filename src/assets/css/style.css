@@ -305,7 +305,7 @@ header .container nav ul li {
 .stars-we-lost-section .container .star-cards {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 70px;
   align-items: center;
 }
 .stars-we-lost-section .container .star-cards .card .img-wrapper {
@@ -344,7 +344,7 @@ header .container nav ul li {
 .awardists-section .container .star-cards {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 70px;
   align-items: center;
 }
 .awardists-section .container .star-cards .card .img-wrapper {
@@ -461,7 +461,7 @@ header .container nav ul li {
 .from-the-archives-section .container .star-cards {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 70px;
   align-items: center;
 }
 .from-the-archives-section .container .star-cards .card .img-wrapper {
@@ -532,6 +532,10 @@ header .container nav ul li {
 }
 .music-section .container .music-news-wrapper {
   padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 65px;
 }
 .music-section .container .music-news-wrapper .music-news-left-sect .img-wrapper {
   width: 700px;
@@ -564,43 +568,256 @@ header .container nav ul li {
   font-size: 15px;
   line-height: 3rem;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect {
-  border-bottom: 1px solid gray;
-  padding: 10px 0px;
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news {
+  margin-bottom: 25px;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news .time-category {
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box .news-img {
+  width: 144px !important;
+  height: 95px;
+}
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box .news-img img {
+  width: 100%;
+  height: 100%;
+}
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box .music-news-img-content p {
+  font-weight: 400;
+}
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box .music-news-img-content .by {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 15px;
+  line-height: 3rem;
+}
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box .music-news-img-content .time-category {
   margin-bottom: 10px;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news .time-category .time {
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box .music-news-img-content .time-category .time {
   margin-left: 20px;
   font-size: 18px;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news .time-category .category {
+.music-section .container .music-news-wrapper .music-news-right-sect .music-news .music-news-box .music-news-img-content .time-category .category {
   font-size: 18px;
   color: #217d4d;
   font-weight: 700;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news + .latest-news-box {
+
+.movie-section {
   width: 100%;
-  height: auto;
+}
+.movie-section .container {
+  width: 65%;
+}
+.movie-section .container .title {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news + .latest-news-box .news-img {
-  width: 104px !important;
-  height: 70px;
+.movie-section .container .title .title-logo {
+  width: 90px;
+  height: 47px;
+  margin-top: 10px;
+  background-image: url("../images/Screenshot 2023-12-17 202307.png");
+  background-repeat: no-repeat;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news + .latest-news-box .news-img img {
+.movie-section .container .title span {
+  font-size: 55px;
+  font-weight: 900;
+  margin-left: 8px;
+  font-family: OriginalSans, Times, serif;
+  margin-left: 0px;
+}
+.movie-section .container .movie-news-wrapper {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 65px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-left-sect .img-wrapper {
+  width: 700px;
+  height: 460px;
+  margin-bottom: 20px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-left-sect .img-wrapper img {
   width: 100%;
   height: 100%;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news + .latest-news-box .news-img-content {
-  width: 207px !important;
+.movie-section .container .movie-news-wrapper .movie-news-left-sect .img-content .time-category {
+  margin-bottom: 10px;
 }
-.music-section .container .music-news-wrapper .music-news-right-sect .latest-news + .latest-news-box .news-img-content span {
-  margin-top: 15px;
+.movie-section .container .movie-news-wrapper .movie-news-left-sect .img-content .time-category .time {
+  margin-left: 20px;
+  font-size: 18px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-left-sect .img-content .time-category .category {
+  font-size: 18px;
+  color: #217d4d;
+  font-weight: 700;
+}
+.movie-section .container .movie-news-wrapper .movie-news-left-sect .img-content h1 {
+  font-family: CaslonDoric, Times, serif;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.movie-section .container .movie-news-wrapper .movie-news-left-sect .img-content .by {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 15px;
+  line-height: 3rem;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news {
+  margin-bottom: 25px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box .news-img {
+  width: 144px !important;
+  height: 95px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box .news-img img {
+  width: 100%;
+  height: 100%;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box .movie-news-img-content p {
+  font-weight: 400;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box .movie-news-img-content .by {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 15px;
+  line-height: 3rem;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box .movie-news-img-content .time-category {
+  margin-bottom: 10px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box .movie-news-img-content .time-category .time {
+  margin-left: 20px;
+  font-size: 18px;
+}
+.movie-section .container .movie-news-wrapper .movie-news-right-sect .movie-news .movie-news-box .movie-news-img-content .time-category .category {
+  font-size: 18px;
+  color: #217d4d;
+  font-weight: 700;
+}
+
+.television-section {
+  width: 100%;
+  margin-left: 20px;
+}
+.television-section .container .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.television-section .container .title .title-logo {
+  width: 90px;
+  height: 55px;
+  background-image: url("../images/Screenshot 2023-12-17 222329.png");
+  background-repeat: no-repeat;
+}
+.television-section .container .title span {
+  font-size: 55px;
+  font-weight: 900;
+  margin-left: 8px;
+  font-family: OriginalSans, Times, serif;
+  margin-left: 0px;
+}
+.television-section .container .television-news-wrapper {
+  padding-top: 20px;
+  gap: 65px;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect {
+  margin-bottom: 25px;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect .img-wrapper {
+  width: 860px;
+  height: 460px;
+  margin-bottom: 15px;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect .img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect .img-content .time-category {
+  margin-bottom: 10px;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect .img-content .time-category .time {
+  margin-left: 20px;
+  font-size: 18px;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect .img-content .time-category .category {
+  font-size: 18px;
+  color: #217d4d;
+  font-weight: 700;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect .img-content h1 {
+  font-family: CaslonDoric, Times, serif;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.television-section .container .television-news-wrapper .television-news-left-sect .img-content .by {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 15px;
+  line-height: 3rem;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 20px;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news {
+  margin-bottom: 25px;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box {
+  width: 100%;
+  height: auto;
+  gap: 15px;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box .news-img {
+  width: 400px !important;
+  height: 265px;
+  margin-bottom: 15px;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box .news-img img {
+  width: 100%;
+  height: 100%;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box .television-news-img-content p {
+  font-weight: 400;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box .television-news-img-content .by {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 15px;
+  line-height: 3rem;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box .television-news-img-content .time-category {
+  margin-bottom: 10px;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box .television-news-img-content .time-category .time {
+  margin-left: 20px;
+  font-size: 18px;
+}
+.television-section .container .television-news-wrapper .television-news-right-sect .television-news .television-news-box .television-news-img-content .time-category .category {
+  font-size: 18px;
+  color: #217d4d;
+  font-weight: 700;
 }
 
 footer {

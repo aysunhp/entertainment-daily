@@ -346,7 +346,7 @@ header {
     .star-cards {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 70px;
 
       align-items: center;
       .card {
@@ -390,7 +390,7 @@ header {
     .star-cards {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 70px;
 
       align-items: center;
       .card {
@@ -520,8 +520,7 @@ header {
     .star-cards {
       display: flex;
       justify-content: center;
-      gap: 30px;
-
+      gap: 70px;
       align-items: center;
       .card {
         .img-wrapper {
@@ -595,6 +594,10 @@ header {
     }
     .music-news-wrapper {
       padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 65px;
       .music-news-left-sect {
         .img-wrapper {
           width: 700px;
@@ -632,9 +635,95 @@ header {
       }
 
       .music-news-right-sect {
-        border-bottom: 1px solid gray;
-        padding: 10px 0px;
-        .latest-news {
+        .music-news {
+          margin-bottom: 25px;
+          .music-news-box {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+            .news-img {
+              width: 144px !important;
+              height: 95px;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .music-news-img-content {
+              p {
+                font-weight: 400;
+              }
+              .by {
+                color: rgba(0, 0, 0, 0.65);
+                font-size: 15px;
+                line-height: 3rem;
+              }
+              .time-category {
+                margin-bottom: 10px;
+                .time {
+                  margin-left: 20px;
+                  font-size: 18px;
+                }
+                .category {
+                  font-size: 18px;
+                  color: #217d4d;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// movie
+.movie-section {
+  width: 100%;
+  .container {
+    width: 65%;
+    .title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      border-bottom: 1px solid black;
+      margin-top: 10px;
+      .title-logo {
+        width: 90px;
+        height: 47px;
+        margin-top: 10px;
+        background-image: url("../images/Screenshot\ 2023-12-17\ 202307.png");
+        background-repeat: no-repeat;
+      }
+      span {
+        font-size: 55px;
+        font-weight: 900;
+        margin-left: 8px;
+        font-family: OriginalSans, Times, serif;
+        margin-left: 0px;
+      }
+    }
+    .movie-news-wrapper {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 65px;
+      .movie-news-left-sect {
+        .img-wrapper {
+          width: 700px;
+          height: 460px;
+          margin-bottom: 20px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .img-content {
           .time-category {
             margin-bottom: 10px;
             .time {
@@ -646,28 +735,294 @@ header {
               color: #217d4d;
               font-weight: 700;
             }
-          }+
-          
+          }
+          h1 {
+            font-family: CaslonDoric, Times, serif;
+            font-weight: 600;
+            line-height: 1.5rem;
+          }
+          .by {
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 15px;
+            line-height: 3rem;
+          }
+        }
+      }
 
-          .latest-news-box {
+      .movie-news-right-sect {
+        .movie-news {
+          margin-bottom: 25px;
+          .movie-news-box {
             width: 100%;
             height: auto;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start;
             gap: 15px;
             .news-img {
-              width: 104px !important;
-              height: 70px;
+              width: 144px !important;
+              height: 95px;
               img {
                 width: 100%;
                 height: 100%;
               }
             }
-            .news-img-content {
-              width: 207px !important;
-              span {
-                margin-top: 15px;
+            .movie-news-img-content {
+              p {
+                font-weight: 400;
+              }
+              .by {
+                color: rgba(0, 0, 0, 0.65);
+                font-size: 15px;
+                line-height: 3rem;
+              }
+              .time-category {
+                margin-bottom: 10px;
+                .time {
+                  margin-left: 20px;
+                  font-size: 18px;
+                }
+                .category {
+                  font-size: 18px;
+                  color: #217d4d;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// // movie
+// .movie-section {
+//   width: 100%;
+//   .container {
+//     width: 65%;
+//     .title {
+//       display: flex;
+//       justify-content: flex-start;
+//       align-items: flex-end;
+//       border-bottom: 1px solid black;
+//       margin-top: 10px;
+//       .title-logo {
+//         width: 90px;
+//         height: 47px;
+//         margin-top: 10px;
+//         background-image: url("../images/Screenshot\ 2023-12-17\ 202307.png");
+//         background-repeat: no-repeat;
+//       }
+//       span {
+//         font-size: 55px;
+//         font-weight: 900;
+//         margin-left: 8px;
+//         font-family: OriginalSans, Times, serif;
+//         margin-left: 0px;
+//       }
+//     }
+//     .movie-news-wrapper {
+//       padding-top: 20px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: flex-start;
+//       gap: 65px;
+//       .movie-news-left-sect {
+//         .img-wrapper {
+//           width: 700px;
+//           height: 460px;
+//           margin-bottom: 20px;
+//           img {
+//             width: 100%;
+//             height: 100%;
+//           }
+//         }
+//         .img-content {
+//           .time-category {
+//             margin-bottom: 10px;
+//             .time {
+//               margin-left: 20px;
+//               font-size: 18px;
+//             }
+//             .category {
+//               font-size: 18px;
+//               color: #217d4d;
+//               font-weight: 700;
+//             }
+//           }
+//           h1 {
+//             font-family: CaslonDoric, Times, serif;
+//             font-weight: 600;
+//             line-height: 1.5rem;
+//           }
+//           .by {
+//             color: rgba(0, 0, 0, 0.65);
+//             font-size: 15px;
+//             line-height: 3rem;
+//           }
+//         }
+//       }
+
+//       .movie-news-right-sect {
+//         .movie-news {
+//           margin-bottom: 25px;
+//           .movie-news-box {
+//             width: 100%;
+//             height: auto;
+//             display: flex;
+//             justify-content: center;
+//             align-items: flex-start;
+//             gap: 15px;
+//             .news-img {
+//               width: 144px !important;
+//               height: 95px;
+//               img {
+//                 width: 100%;
+//                 height: 100%;
+//               }
+//             }
+//             .movie-news-img-content {
+//               p {
+//                 font-weight: 400;
+//               }
+//               .by {
+//                 color: rgba(0, 0, 0, 0.65);
+//                 font-size: 15px;
+//                 line-height: 3rem;
+//               }
+//               .time-category {
+//                 margin-bottom: 10px;
+//                 .time {
+//                   margin-left: 20px;
+//                   font-size: 18px;
+//                 }
+//                 .category {
+//                   font-size: 18px;
+//                   color: #217d4d;
+//                   font-weight: 700;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// television
+.television-section {
+  width: 100%;
+  margin-left: 20px;
+  .container {
+    // width: 65%;
+    .title {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      border-bottom: 1px solid black;
+      margin-top: 10px;
+      margin-right: 20px;
+      .title-logo {
+        width: 90px;
+        height: 55px;
+        // margin-top: 10px;
+        background-image: url("../images/Screenshot\ 2023-12-17\ 222329.png");
+        background-repeat: no-repeat;
+      }
+      span {
+        font-size: 55px;
+        font-weight: 900;
+        margin-left: 8px;
+        font-family: OriginalSans, Times, serif;
+        margin-left: 0px;
+      }
+    }
+    .television-news-wrapper {
+      padding-top: 20px;
+      // display: flex;
+      // justify-content: center;
+      // align-items: flex-start;
+      gap: 65px;
+      .television-news-left-sect {
+        margin-bottom: 25px;
+        .img-wrapper {
+          width: 860px;
+          height: 460px;
+          margin-bottom: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .img-content {
+          .time-category {
+            margin-bottom: 10px;
+            .time {
+              margin-left: 20px;
+              font-size: 18px;
+            }
+            .category {
+              font-size: 18px;
+              color: #217d4d;
+              font-weight: 700;
+            }
+          }
+          h1 {
+            font-family: CaslonDoric, Times, serif;
+            font-weight: 600;
+            line-height: 1.5rem;
+          }
+          .by {
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 15px;
+            line-height: 3rem;
+          }
+        }
+      }
+
+      .television-news-right-sect {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-right: 20px;
+        .television-news {
+          margin-bottom: 25px;
+
+          .television-news-box {
+            width: 100%;
+            height: auto;
+            gap: 15px;
+            .news-img {
+              width: 400px !important;
+              height: 265px;
+              margin-bottom: 15px;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .television-news-img-content {
+              p {
+                font-weight: 400;
+              }
+              .by {
+                color: rgba(0, 0, 0, 0.65);
+                font-size: 15px;
+                line-height: 3rem;
+              }
+              .time-category {
+                margin-bottom: 10px;
+                .time {
+                  margin-left: 20px;
+                  font-size: 18px;
+                }
+                .category {
+                  font-size: 18px;
+                  color: #217d4d;
+                  font-weight: 700;
+                }
               }
             }
           }
