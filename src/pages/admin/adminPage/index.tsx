@@ -6,56 +6,48 @@ import { RootState } from "../../../redux/store/store";
 import "../../../assets/styles/style.scss";
 
 const index = () => {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://657f53116ae0629a3f53367d.mockapi.io/api/entertainment"
-  //       );
-  //       console.log("Response data:", response.data);
-  //       dispatch(setAllNews(response.data));
-  //       console.log("All news after dispatch:", allNews);
-  //     } catch (error) {
-  //       console.error("Error fetching posts", error);
-  //     }
-  //   };
-
-  //   fetchPosts();
-  // }, [dispatch]);
-
-  let allNews = useSelector((state: RootState) => state.news.allNews);
-  console.log(allNews);
-  allNews = [...allNews].sort((a, b) =>
-    a.publishedAt.localeCompare(b.publishedAt)
-  );
+  // console.log(allNews);
+  // allNews = [...allNews].sort((a, b) =>
+  //   a.publishedAt.localeCompare(b.publishedAt)
+  // );
   return (
     <>
       <h1 id="product-heading">News</h1>
       <div className="table">
         <div className="table-header">
-          <div className="header__item">
-            <a id="name" className="filter__link" href="#">
+          <div className="header__item id">
+            <a id="wins" className="filter__link filter__link--number" href="#">
               ID
             </a>
           </div>
-          <div className="header__item">
+          <div className="header__item category">
             <a id="wins" className="filter__link filter__link--number" href="#">
-              Name
+              Category
             </a>
           </div>
-          <div className="header__item">
-            <a
-              id="draws"
-              className="filter__link filter__link--number"
-              href="#"
-            >
+          <div className="header__item content">
+            <a id="wins" className="filter__link filter__link--number" href="#">
+              Content
+            </a>
+          </div>
+          <div className="header__item title">
+            <a id="wins" className="filter__link filter__link--number" href="#">
+              Title
+            </a>
+          </div>
+          <div className="header__item url">
+            <a id="wins" className="filter__link filter__link--number" href="#">
+              Url
+            </a>
+          </div>
+          <div className="header__item image">
+            <a id="wins" className="filter__link filter__link--number" href="#">
               Image
             </a>
           </div>
           <div className="header__item edit">
             <a
-              id="losses"
+              id="total"
               className="filter__link filter__link--number"
               href="#"
             >
@@ -73,31 +65,29 @@ const index = () => {
           </div>
         </div>
         <div className="table-content">
-          {allNews &&
-            allNews.map((elem) => {
-              return (
-                <div className="table-row" key={elem.id}>
-                  <div className="table-data">{elem.id}</div>
-                  <div className="table-data">{elem.title}</div>
-                  <div className="table-data projImgAdmin">
-                    <img src={elem.url} />
-                  </div>
-                  <div className="table-data ">
-                    <button className="editBtnAdmin">Edit</button>
-                  </div>
-                  <div className="table-data ">
-                    <button
-                      className="deleteBtnAdmin"
-                      onClick={(e) => {
-                        e.preventDefault();
-                      }}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
+          <div className="table-row">
+            <div className="table-data id">ID</div>
+            <div className="table-data category">Category</div>
+            <div className="table-data content">Content</div>
+            <div className="table-data title">Title</div>
+            <div className="table-data url">url</div>
+            <div className="table-data image">
+              <img src="huhyg" />
+            </div>
+            <div className="table-data  edit">
+              <button className="editBtnAdmin">Edit</button>
+            </div>
+            <div className="table-data delete">
+              <button
+                className="deleteBtnAdmin"
+                onClick={(e) => {
+                  e.preventDefault();
+                }}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>

@@ -135,6 +135,7 @@ const initialState: NewsState = {
 };
 
 export const fetchNews = createAsyncThunk("news/fetchNews", async () => {
+  console.log("salam");
   try {
     const response = await axios.get<NewsType[]>(
       "https://657f53116ae0629a3f53367d.mockapi.io/api/entertainment"

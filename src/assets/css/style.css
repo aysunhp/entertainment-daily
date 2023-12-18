@@ -976,4 +976,101 @@ form button {
   border-radius: 5px;
   background-color: white;
   border-color: lightgray;
+}
+
+.table {
+  width: 100%;
+}
+.table .table-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table .table-content {
+  width: 100%;
+}
+.table .table-content .table-row {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table .header__item {
+  border: 1px solid lightgray;
+  height: 60px;
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.table .table-data {
+  border: 1px solid lightgray;
+  height: 60px;
+  text-align: center;
+  font-weight: 450;
+  font-size: 18px;
+  text-decoration: none;
+}
+.table .id {
+  width: 12%;
+  text-decoration: none;
+}
+.table .category {
+  width: 12%;
+  text-decoration: none;
+}
+.table .content {
+  width: 12%;
+  text-decoration: none;
+}
+.table .title {
+  width: 12%;
+  text-decoration: none;
+}
+.table .url {
+  width: 12%;
+  text-decoration: none;
+}
+.table .image {
+  width: 12%;
+  text-decoration: none;
+}
+.table .edit {
+  width: 12%;
+  text-decoration: none;
+}
+.table .delete {
+  width: 12%;
+  text-decoration: none;
+}
+.table .deleteBtnAdmin {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+.table .table-data.id,
+.table .table-data.category,
+.table .table-data.content,
+.table .table-data.title,
+.table .table-data.url,
+.table .table-data.image {
+  padding: 20px 0px;
+}
+.table .editBtnAdmin {
+  padding: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: skyblue;
+  border: none;
+  color: white;
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
