@@ -1,5 +1,29 @@
+import { useDispatch, useSelector } from "react-redux";
 import "../../assets/styles/style.scss";
+import { useEffect } from "react";
+import { fetchNews } from "../../redux/slice/newsSilce";
+import { RootState } from "../../redux/store/store";
+
 const Music = () => {
+  const dispatch = useDispatch();
+  let { allNews, loading, error } = useSelector(
+    (state: RootState) => state.news
+  );
+
+  let newsData = allNews;
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  allNews = [...newsData].sort((a, b) =>
+    a.publishedAt.localeCompare(b.publishedAt)
+  );
+  allNews = allNews.filter((item) => item.category === "music");
+
   return (
     <>
       <div className="music-section">
@@ -11,104 +35,38 @@ const Music = () => {
           <div className="music-news-wrapper">
             <div className="music-news-left-sect">
               <div className="img-wrapper">
-                <img
-                  src="https://ew.com/thmb/09CpMujH8dRbNFT8jrdx45ukUZc=/771x514/filters:no_upscale():max_bytes(150000):strip_icc()/BW23-best-albums-5a52b65520c44c548f3a37620f7a1c1e.jpg"
-                  alt=""
-                />
+                <img src={allNews[0].urlToImage} alt="" />
               </div>
               <div className="img-content">
                 <div className="time-category">
-                  <span className="category">TV</span>
-                  <span className="time">12 hours ago</span>
+                  <span className="category">{allNews[0].category}</span>
+                  <span className="time">{allNews[0].publishedAt}</span>
                 </div>
-                <h1>Lorem ipsum dolor sit amet.</h1>
-                <span className="by">
-                  By Lester Fabian Brathwaite, Maura Johnston, Jason Lamphier,
-                  Allaire Nuss, and Emlyn Travis
-                </span>
+                <h1>{allNews[0].content}.</h1>
+                <span className="by">By {allNews[0].author}</span>
               </div>
             </div>
             <div className="music-news-right-sect">
-              <div className="music-news">
-                <div className="music-news-box">
-                  <div className="news-img">
-                    <img
-                      src="https://ew.com/thmb/1F5vv1kStbhfcLalyNC4rzuKe9Q=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/finneas-and-billie-eilish-barbie-1-tout--121523-d80a9f1446dd486b9233666ca0ef76d1.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="music-news-img-content">
-                    <div className="time-category">
-                      <span className="category">TV</span>
-                      <span className="time">12 hours ago</span>
+              {allNews &&
+                allNews.slice(1, 5).map((item) => {
+                  return (
+                    <div className="music-news">
+                      <div className="music-news-box">
+                        <div className="news-img">
+                          <img src={item.urlToImage} alt="" />
+                        </div>
+                        <div className="music-news-img-content">
+                          <div className="time-category">
+                            <span className="category">{item.category}</span>
+                            <span className="time">{item.publishedAt}</span>
+                          </div>
+                          <p>{item.title}</p>
+                          <span className="by">By {item.author}</span>
+                        </div>
+                      </div>
                     </div>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    </p>
-                    <span className="by">By Clarc Colins</span>
-                  </div>
-                </div>
-              </div>
-              <div className="music-news">
-                <div className="music-news-box">
-                  <div className="news-img">
-                    <img
-                      src="https://ew.com/thmb/1F5vv1kStbhfcLalyNC4rzuKe9Q=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/finneas-and-billie-eilish-barbie-1-tout--121523-d80a9f1446dd486b9233666ca0ef76d1.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="music-news-img-content">
-                    <div className="time-category">
-                      <span className="category">TV</span>
-                      <span className="time">12 hours ago</span>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    </p>
-                    <span className="by">By Clarc Colins</span>
-                  </div>
-                </div>
-              </div>
-              <div className="music-news">
-                <div className="music-news-box">
-                  <div className="news-img">
-                    <img
-                      src="https://ew.com/thmb/1F5vv1kStbhfcLalyNC4rzuKe9Q=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/finneas-and-billie-eilish-barbie-1-tout--121523-d80a9f1446dd486b9233666ca0ef76d1.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="music-news-img-content">
-                    <div className="time-category">
-                      <span className="category">TV</span>
-                      <span className="time">12 hours ago</span>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    </p>
-                    <span className="by">By Clarc Colins</span>
-                  </div>
-                </div>
-              </div>
-              <div className="music-news">
-                <div className="music-news-box">
-                  <div className="news-img">
-                    <img
-                      src="https://ew.com/thmb/1F5vv1kStbhfcLalyNC4rzuKe9Q=/282x188/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/finneas-and-billie-eilish-barbie-1-tout--121523-d80a9f1446dd486b9233666ca0ef76d1.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="music-news-img-content">
-                    <div className="time-category">
-                      <span className="category">TV</span>
-                      <span className="time">12 hours ago</span>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    </p>
-                    <span className="by">By Clarc Colins</span>
-                  </div>
-                </div>
-              </div>
+                  );
+                })}
             </div>
           </div>
         </div>

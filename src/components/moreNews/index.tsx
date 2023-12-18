@@ -1,4 +1,31 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchNews } from "../../redux/slice/newsSilce";
+import { RootState } from "../../redux/store/store";
+
 const MoreNews = () => {
+  const dispatch = useDispatch();
+  let { allNews, loading, error } = useSelector(
+    (state: RootState) => state.news
+  );
+
+  let newsData = allNews;
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  allNews = [...newsData].sort((a, b) =>
+    a.publishedAt.localeCompare(b.publishedAt)
+  );
+
+  allNews = allNews.filter(
+    (item) => item.category === "binge" || "celebrity" || "book"
+  );
+
   return (
     <>
       <div className="more-news-section">
@@ -8,66 +35,26 @@ const MoreNews = () => {
             <span>More News</span>
           </div>
           <div className="news-container">
-            <div className="news-wrapper">
-              <div className="latest-news-box">
-                <div className="news-img">
-                  <img
-                    src=" https://ew.com/thmb/PiULXzV9Nwhp9dz0RO3vwzD2qhQ=/800x533/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Susan-Lucci-life-time-achievement-121523-1818633b2fe4410d82500a12a684f17a.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="news-content">
-                  <div className="time-category">
-                    <span className="category">TV</span>
-                    <span className="time">12 hours ago</span>
+            {allNews &&
+              allNews.slice(0, 10).map((item) => {
+                return (
+                  <div className="news-wrapper">
+                    <div className="latest-news-box">
+                      <div className="news-img">
+                        <img src={item.urlToImage} alt="" />
+                      </div>
+                      <div className="news-content">
+                        <div className="time-category">
+                          <span className="category">{item.category}</span>
+                          <span className="time">{item.publishedAt}</span>
+                        </div>
+                        <p>{item.description}</p>
+                        <span className="by">By {item.author}</span>
+                      </div>
+                    </div>
                   </div>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  </p>
-                  <span className="by">By Clarc Colins</span>
-                </div>
-              </div>
-            </div>
-            <div className="news-wrapper">
-              <div className="latest-news-box">
-                <div className="news-img">
-                  <img
-                    src=" https://ew.com/thmb/PiULXzV9Nwhp9dz0RO3vwzD2qhQ=/800x533/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Susan-Lucci-life-time-achievement-121523-1818633b2fe4410d82500a12a684f17a.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="news-content">
-                  <div className="time-category">
-                    <span className="category">TV</span>
-                    <span className="time">12 hours ago</span>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  </p>
-                  <span className="by">By Clarc Colins</span>
-                </div>
-              </div>
-            </div>
-            <div className="news-wrapper">
-              <div className="latest-news-box">
-                <div className="news-img">
-                  <img
-                    src=" https://ew.com/thmb/PiULXzV9Nwhp9dz0RO3vwzD2qhQ=/800x533/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Susan-Lucci-life-time-achievement-121523-1818633b2fe4410d82500a12a684f17a.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="news-content">
-                  <div className="time-category">
-                    <span className="category">TV</span>
-                    <span className="time">12 hours ago</span>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  </p>
-                  <span className="by">By Clarc Colins</span>
-                </div>
-              </div>
-            </div>
+                );
+              })}
           </div>
         </div>
       </div>

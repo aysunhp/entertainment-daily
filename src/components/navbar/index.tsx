@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../../assets/styles/style.scss";
 
 const Navbar = () => {
@@ -27,15 +28,41 @@ const Navbar = () => {
         </div>
         <nav>
           <ul>
-            <li>TV</li>
-            <li>MOVIES</li>
-            <li>MUSIC</li>
-            <li>WHAT DO WATCH</li>
-            <li>BINGE</li>
-            <li>CELEBRITY</li>
-            <li>THE AWARDIST</li>
-            <li>BOOKS</li>
-            <li>THEATER</li>
+            <li>
+              <Link to="">TV</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">MOVIES</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">MUSIC</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">WHAT DO WATCH</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">BINGE</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">CELEBRITY</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">THE AWARDIST</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">BOOKS</Link>
+            </li>
+            <li>
+              {" "}
+              <Link to="">THEATER</Link>
+            </li>
           </ul>
         </nav>
       </div>
